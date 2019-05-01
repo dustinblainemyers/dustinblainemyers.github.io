@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        
+         
+            
+         function init() {
+          
+            
+            
+            game();
+         
+            
+           
+
+         
+           function game() {
+         
+             let computerScore = 0;
+               let playerScore = 0;
+               let computerSelection;
+               let playerSelection;
+              
+         let roundCurrent;
+         for (let gameTally = 1; gameTally < 6; gameTally++) {
+             
+              computerSelection = "notvalid";
+                playerSelection = "notvalid";
+             
+               
+             while(playerSelection === "notvalid"  ) {
+             setTimeout(1000);
+             document.getElementById("messages").innerHTML = `Enter your choice in textbox to start round ${gameTally}`;
+             computerSelection = computerPlay();
+             }
+             
+              
+             
+              roundCurrent = playRound(playerSelection, computerSelection);
+              if (roundCurrent === "tie") {
+               document.getElementById("messages").innerHTML = `That was a tie , we are going to repeat that round`;  
+               gameTally--;
+             } else { 
+     
+               document.getElementById("messages").innerHTML = `${roundCurrent} round ${gameTally}`;
+             }
+         
+         document.getElementById("Player Score").innerHTML = `${playerScore}`;
+         document.getElementById("Computer Score").innerHTML = `${computerScore}`;
+         }
+             
+     
+     if (computerScore > playerScore) {
+       document.getElementById("Game Winner").innerHTML = `Computer Wins Game`;
+     
+       }  else {
+         document.getElementById("Game Winner").innerHTML = `Player Wins Game`;
+     
+     }
+         
+          
+           
+       
+         }
+     
+      
+     
+      
+         
+         
+     
+     
+         
+         //submit button takes playerSelection text field ID and 
+         function submitMe(inputSanitizationCallBack) {
+     
+     return playerSelection = inputSanitizationCallBack(document.getElementById("playerInput").value) ;
+     
+     }
+     
+     function inputSanitization(getInput) {
+      
+     getInput = getInput.toLowerCase();
+     
+     switch(getInput) {
+     case 'paper' : 
+     playerSelection = 'paper';
+      break ;
+     case  'rock' :
+     playerSelection = 'rock';
+      break ;
+     case 'scissors' :
+     playerSelection = 'scissors';
+      break ;
+      default: playerSelection = "notvalid"
+      document.getElementById("messages2").innerHTML = `You must enter rock , paper , or scissors to continue` ;
+      }
+        
+       
+      if (playerSelection != 'notvalid') {
+
+
+        computerPlay();
+        playRound(playerSelection, computerSelection)
+      }   
+           
+           
+           
+          }
+     
+         //need to come up with a better , descriptive variable for this function 
+     
+         function computerPlay() {
+            randomResult =  Math.floor(Math.random() * 3);
+           
+           switch(randomResult) {
+           case 0:
+             randomResult = "rock";
+             break;
+           case 1:
+             randomResult = "paper";
+             break;
+           case 2:
+             randomResult = "scissors";
+             
+          
+          
+         }
+           return randomResult;
+         
+                }
+     
+     
+     
+         function playRound(playerSelection, computerSelection) {
+     
+         
+              
+        
+             if (playerSelection == computerSelection) {
+     
+             return "tie"; 
+             
+             } else {
+                         switch(playerSelection) {
+                             case "rock" :
+                             
+                         
+                                 if (computerSelection == "scissors") {
+                                     playerScore++
+                                     return "Player Wins" ;
+                                     
+                             
+                                     } else {
+                                     
+                                     return "Computer Wins";
+                                     computerScore++
+                                     
+                                     }
+                                     break;
+                             case "paper" :
+                                     if (computerSelection == "rock") {
+                                     playerScore++
+                                     return "Player Wins";
+                                     
+                                     } else {
+     
+                                       computerScore++
+                                       return "Computer Wins";
+                                     
+                                     }
+                                     break;
+                             
+                             case  "scissors" :
+                             
+                                     if (computerSelection == "paper") {
+                                     return "Player Wins";
+                                     playerScore++
+                                     } else {
+                                       computerScore++
+                                       return "Computer Wins";
+                                         
+                                     }
+                             
+                         
+                     
+                         } 
+     
+                        
+         
+                      } 
+                      
+         
+         
+     
+         
+         
+     } 
+
+            }
+   
+         
+         
+            
+     </script>
+
+  </head>
+        
+    <body onload = "init()">
+
+       
+    <h3> Do you play rock , paper , or scissors? </h3>
+    <input type="text" id="playerInput"> 
+    <!-- player enters rock , paper , scissors. must be case insensitive -->
+  
+    <button onclick= "submitMe(inputSanitization)" > Let's Go ! </button>
+     <!-- calls player selection function -->
+  
+      <p id="gameTally"></p><br>
+      <p id="messages"></p><br>
+      <p id="messages2"></p><br>
+      Player Score is :<p id="Player Score"></p><br>
+      Computer Score is :<p id="Computer Score"></p><br>
+      Game Winner is : <p id="Game Winner"></p><br>
+  
+      
+    
+       
+           
+                
+                  
+                
+                
+            
+            
+            
+      
+      
+      </body>
+
+            
+<title>
+</title>
+
+
+
+</html>

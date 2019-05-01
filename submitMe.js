@@ -12,9 +12,12 @@ This function is meant to be called from an event listener.  It declares a varia
 function submitMe() {
     document.getElementById("roundresults").innerHTML = ' ';
     document.getElementById("output").innerHTML = 'shouldnotseethis';
-    document.getElementById("gameTally").innerHTML = ' '
+    document.getElementById("gameTally").innerHTML = gameObject.roundCurrent;
+    //need to change gameTally to roundTally or something more appropriate so everything 
+    //matches.
 
-    playerSelection = inputSanitization(document.getElementById("playerInput").value);
+    playerSelection = inputSanitization(document.getElementById("playerInput").value); // i repeat myself with getElementId , this could
+    //be a function instead.
     playRound(playerSelection, computerPlay());
     }
     
