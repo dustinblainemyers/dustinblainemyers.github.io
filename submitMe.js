@@ -9,39 +9,15 @@ Description:
 This function is meant to be called from an event listener.  It declares a variable , playerSelection, and sets it equal to the playerInput HTML element.
 */
 
-function submitMe() {
+function submitMe(playerSelection) {
     document.getElementById("roundresults").innerHTML = ' ';
     document.getElementById("output").innerHTML = 'shouldnotseethis';
-    document.getElementById("gameTally").innerHTML = gameObject.roundCurrent;
+    document.getElementById("currentRound").innerHTML = gameObject.roundCurrent;
     //need to change gameTally to roundTally or something more appropriate so everything 
     //matches.
 
-    playerSelection = inputSanitization(document.getElementById("playerInput").value); // i repeat myself with getElementId , this could
-    //be a function instead.
-    playRound(playerSelection, computerPlay());
+   playRound(playerSelection, computerPlay());
     }
     
     
-    function inputSanitization(getInput) {
-       
-     getInput = getInput.toLowerCase();
     
-     switch(getInput) {
-      case 'paper' : 
-       getInput = 'paper';
-       break ;
-      case  'rock' :
-       getInput = 'rock';
-       break ;
-      case 'scissors' :
-       getInput = 'scissors';
-       break ;
-       default: getInput = "hello" ;
-       }
-         
-        
-            return getInput;
-            
-            
-            
-           }

@@ -16,13 +16,21 @@
         <input type="text" id="playerInput" 
         <!-- player enters rock , paper , scissors. must be case insensitive -->
   
-        <button onclick= "submitMe()" > Let's Go ! </button><br>
+        <button onclick= "submitMe()" >Start Game</button><br>
+        <button onclick= "submitMe('rock')" > Rock</button><br>
+        <button onclick= "submitMe('paper')" > Paper </button><br>
+        <button onclick= "submitMe('scissors')" > Scissors </button><br>
+        <button onclick= "submitMe()" > New Game </button><br>
+        
          <!-- calls player selection function -->
            
-          Player Score : <p id="output"></p>
+          Player Score : <p id="playerScore"></p>
+          ComputerScore : <p id="computerScore"></p>
+          Tie Notification : <p id="tieNotification"></p>
           
           Round Results: <p id="roundresults"></p>
-          Current Round: <p id="gameTally"></p><br>
+          Current Round: <p id="currentRound"></p><br>
+          Output: <p id="output"></p><br>
 
 </body>
 
