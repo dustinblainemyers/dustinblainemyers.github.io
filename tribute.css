@@ -1,0 +1,28 @@
+
+
+
+#main {
+
+margin: auto;
+background-color: red;
+
+height: 100%;
+width: 100%;
+text-align: center;
+} 
+
+#title {
+
+text-align: center
+}
+
+#image {
+
+  //position: absolute;  
+  margin: auto;
+  height: auto;
+  max-width: 100%;
+  display: block;
+
+
+}
