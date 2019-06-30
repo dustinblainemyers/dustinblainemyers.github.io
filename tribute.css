@@ -11,10 +11,10 @@ width: 100%;
 text-align: center;
 } 
 
-#title {
+#title , #tribute-info , #img-caption {
 margin: auto;
 height: auto;
-max-width: 612px;
+max-width: 100%;
 display: block;
 font-size: 32px;
 background-color: aliceblue;
