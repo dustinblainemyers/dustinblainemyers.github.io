@@ -12,26 +12,45 @@
 </title>
 </head>
 <body>
-        <h3> Do you play rock , paper , or scissors? </h3>
-        <input type="text" id="playerInput" 
-        <!-- player enters rock , paper , scissors. must be case insensitive -->
-  
-        <button onclick= "submitMe()" >Start Game</button><br>
-        <button onclick= "submitMe('rock')" > Rock</button><br>
-        <button onclick= "submitMe('paper')" > Paper </button><br>
-        <button onclick= "submitMe('scissors')" > Scissors </button><br>
-        <button onclick= "submitMe()" > New Game </button><br>
+        <h1> Rock , Paper , Scissors </h1>
+        
+        <button onclick= "newGame()" > New Game </button><br>
+ <table>    
+        
+        
         
          <!-- calls player selection function -->
            
+     <div id="game" style="display:none"> 
+                <button onclick= "submitMe('rock')" > Rock</button><br>
+                <button onclick= "submitMe('paper')" > Paper </button><br>
+                <button onclick= "submitMe('scissors')" > Scissors </button><br>
           Player Score : <p id="playerScore"></p>
           ComputerScore : <p id="computerScore"></p>
           Tie Notification : <p id="tieNotification"></p>
           
           Round Results: <p id="roundresults"></p>
           Current Round: <p id="currentRound"></p><br>
-          Output: <p id="output"></p><br>
+          
 
+        </div>  
+
+</table>   
+<script>
+
+function newGame() {
+  var x = document.getElementById("game");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+
+    return document.getElementById("game").style.display = "block"; 
+  }
+
+ 
+}
+
+
+</script>
 </body>
 
 </html>
