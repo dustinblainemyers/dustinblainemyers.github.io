@@ -13,7 +13,10 @@ This function is meant to be called from an event listener.  It declares a varia
 function newGame() {
     var x = document.getElementById("game");
     if (x.style.display === "none") {
-        x.style.display = "block";
-        return document.getElementById("game").style.display = "block";
+      x.style.display = "block";
+  
+      return document.getElementById("game").style.display = "block"; 
     }
-}
+  
+   
+  }
