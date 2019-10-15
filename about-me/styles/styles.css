@@ -20,6 +20,7 @@ body {
   margin: 0 auto; 
   
   padding: 0 20px 20px 20px;
+  position: fixed;
   
 
 }
@@ -84,7 +85,7 @@ img {
     text-shadow: 1px 1px 1px black ;
     
     height: 100%;
-    width: 320px;
+    width: 100%;
     margin: 0 auto; 
     
     padding: 0 20px 20px 20px;
@@ -113,6 +114,7 @@ img {
     line-height: 1;
     letter-spacing: 1px;
     color: #FFD845;
+    margin-block-end: auto;
     
     
   }
