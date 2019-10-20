@@ -3,10 +3,8 @@ html {
   
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  background-color: #B327AE;
-  height: 100%;
-  width: 100%;
-  
+  background-color: rgb(228, 45, 32);
+ 
   
   
 
@@ -32,7 +30,7 @@ h1 {
   font-size: 60px;
   text-align: center;
   font-family: 'Righteous', cursive;
-  color: #FFD845
+  
   
 }
 
@@ -47,7 +45,7 @@ p, li {
   font-size: 16px;
   line-height: 2;
   letter-spacing: 1px;
-  color: #FFD845;
+  
   
 }
 
@@ -74,7 +72,7 @@ img {
   
     font-family: 'Roboto', sans-serif;
    
-    background-color: #B327AE;
+     
     
     
     
