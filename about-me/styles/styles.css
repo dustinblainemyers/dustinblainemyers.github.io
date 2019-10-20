@@ -88,7 +88,7 @@ img {
   
     text-shadow: 1px 1px 1px black ;
     float: none;
-    text-align:center;
+    
     width: 100%;
     
     
@@ -114,9 +114,9 @@ img {
   
   p, li {
     
-    text-indent: 50px;
+   
     
-    line-height: 1;
+    line-height: 2;
     letter-spacing: 1px;
     
     
