@@ -3,14 +3,18 @@
 
            
 
+
+
+
+
                 function playRound(playerSelection, computerSelection) {
 
-                    let matchresult = "Something went wrong";
-                    // before bug I got player input and computer input inside of this function.
+                    let matchresult = '';
+                    
                          
                         
                         if (playerSelection == computerSelection) {
-                        matchresult = "tie" ;
+                        playRound.matchresult = "tie" ;
                 
                         document.getElementById("tieNotification").innerHTML = 'That was a tie, we are going to redo this round';
                         return 'tie'; 
@@ -21,20 +25,20 @@
                                         
                                     
                                             if (computerSelection == "scissors") {
-                                                matchresult = "Player Win" ;
+                                                playRound.matchresult = "Player Win" ;
                                                 gameObject.playerScore++;
                                         
                                                 } else {
-                                                matchresult = " Computer Wins";
+                                                playRound.matchresult = " Computer Wins";
                                                 gameObject.computerScore++;
                                                 }
                                                 break;
                                         case "paper" :
                                                 if (computerSelection == "rock") {
-                                                matchresult = "Player Wins" ;
+                                                playRound.matchresult = "Player Wins" ;
                                                 gameObject.playerScore++;
                                                 } else {
-                                                matchresult = " Computer Wins";
+                                                playRound.matchresult = " Computer Wins";
                                                 gameObject.computerScore++;
                                                 }
                                                 break;
@@ -42,10 +46,10 @@
                                         case  "scissors" :
                                         
                                                 if (computerSelection == "paper") {
-                                                matchresult = "Player Wins" ;
+                                                playRound.matchresult = "Player Wins" ;
                                                 gameObject.playerScore++;
                                                 } else {
-                                                    matchresult = " Computer Wins";
+                                                    playRound.matchresult = " Computer Wins";
                                                     gameObject.computerScore++;
                                                 }
                                         
@@ -54,11 +58,15 @@
                                     } 
                     
                                  } 
-                                 
-                      results = 'The player chose'  + ' ' + playerSelection + ' ' + 'and the computer chose' +  ' ' +    computerSelection +  '   the result is a ' + '' + matchresult
+                    
+                    gameObject.roundCurrent++;
+                    let results = 'The player chose'  + ' ' + playerSelection + ' ' + 'and the computer chose' +  ' ' +    computerSelection +  '   the result is a ' + '' + playRound.matchresult
                     document.getElementById("roundresults").innerHTML = results;
-                    document.getElementById("playerScore").innerHTML = gameObject.playerScore ;
-                    document.getElementById("computerScore").innerHTML = gameObject.computerScore ;
+
+                    gameObject.updateScoreboard();
+                    // document.getElementById("playerScore").innerHTML = gameObject.playerScore ;
+                    // document.getElementById("computerScore").innerHTML = gameObject.computerScore ;
+                    // document.getElementById("currentRound").innerHTML = gameObject.roundCurrent ;
 
                     //alert("Computer Score is " + computerScore);
                 

@@ -11,6 +11,14 @@ const gameObject = {
         this.computerScore = 0;
         this.playerScore = 0;
         this.roundCurrent = 1;
+        this.updateScoreboard();
+    },
+
+    updateScoreboard() {
+
+        document.getElementById("currentRound").innerHTML = this.roundCurrent;
+        document.getElementById("playerScore").innerHTML = this.playerScore ;
+        document.getElementById("computerScore").innerHTML = this.computerScore ;
     }
     // have a method to iterate the roundCurrent (current round).  Have a way of returning or doing a try/catch 
 
