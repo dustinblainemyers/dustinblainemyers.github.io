@@ -11,12 +11,14 @@ This function is meant to be called from an event listener.  It declares a varia
     
 
 function startGame() {
-    var x = document.getElementById("game");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-  
-      return document.getElementById("game").style.display = "block"; 
-    }
+    // let x = document.getElementById("game");
+    // let y = document.getElementById("startGame");
+    
+    // x.style.display = "block";
+    document.getElementById("game").style.display = "block"; 
+    document.getElementById("startGame").style.display = "none";
+             
+    
   
    
   }

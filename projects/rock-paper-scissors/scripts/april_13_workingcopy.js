@@ -64,13 +64,9 @@
                     document.getElementById("roundresults").innerHTML = results;
 
                     gameObject.updateScoreboard();
-                    // document.getElementById("playerScore").innerHTML = gameObject.playerScore ;
-                    // document.getElementById("computerScore").innerHTML = gameObject.computerScore ;
-                    // document.getElementById("currentRound").innerHTML = gameObject.roundCurrent ;
-
-                    //alert("Computer Score is " + computerScore);
+                    
                 
-                    return results;
+                    
                     
                     
                 } 

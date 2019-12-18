@@ -16,21 +16,28 @@
 </title>
 </head>
 <body>
-        <h1> Rock , Paper , Scissors </h1>
         
+        <h1> Rock , Paper , Scissors </h1>
+
+
+        <div id="startGame">
         <button onclick= "startGame()" > Start Game </button><br>
+
+        </div>
         
  <table>    
         
         
         
-         <!-- calls player selection function -->
+         
            
      <div id="game" style="display:none"> 
+                
+                <button onclick= "gameObject.newGame()"> New Game </button><br>
                 <button onclick= "submitMe('rock')" > Rock</button><br>
                 <button onclick= "submitMe('paper')" > Paper </button><br>
                 <button onclick= "submitMe('scissors')" > Scissors </button><br>
-                <button onclick= "gameObject.newGame()"> New Game </button><br>
+                
                 Player Score : <p id="playerScore"></p>
                 ComputerScore : <p id="computerScore"></p>
                 Tie Notification : <p id="tieNotification"></p>
