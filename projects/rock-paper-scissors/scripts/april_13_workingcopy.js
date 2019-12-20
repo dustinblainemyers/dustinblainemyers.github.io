@@ -11,13 +11,14 @@
 
                     let matchresult = '';
                     
+                    
+                    
                          
                         
                         if (playerSelection == computerSelection) {
-                        playRound.matchresult = "tie" ;
+                        gameObject.tie++
                 
-                        document.getElementById("tieNotification").innerHTML = 'That was a tie, we are going to redo this round';
-                        return 'tie'; 
+                        
                         
                         } else {
                                     switch(playerSelection) {
@@ -59,14 +60,22 @@
                     
                                  } 
                     
-                    gameObject.roundCurrent++;
-                    let results = 'The player chose'  + ' ' + playerSelection + ' ' + 'and the computer chose' +  ' ' +    computerSelection +  '   the result is a ' + '' + playRound.matchresult
-                    document.getElementById("roundresults").innerHTML = results;
-
+                    gameObject.updateRound()
+                    
                     gameObject.updateScoreboard();
+
+
+                    
+                    
+                    
+
                     
                 
                     
                     
                     
                 } 
+
+
+
+                

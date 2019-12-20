@@ -1,10 +1,10 @@
 
 function submitMe(playerSelection) {
-    document.getElementById("roundresults").innerHTML = ' ';
+    
     
     
 
-    gameObject.updateScoreboard();
+    // gameObject.updateScoreboard();
 
    playRound(playerSelection, computerPlay());
     }

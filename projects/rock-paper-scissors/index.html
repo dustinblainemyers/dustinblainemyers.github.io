@@ -18,12 +18,22 @@
 <body>
         
         <h1> Rock , Paper , Scissors </h1>
-
-
-        <div id="startGame">
-        <button onclick= "startGame()" > Start Game </button><br>
-
+        Round: <p id="currentRound">1</p><br>
+        <div id="PlayerSelection">
+        Make your selection for this round: <br>
+        <br>
+        <button onclick= "submitMe('rock')" > Rock</button>
+        <button onclick= "submitMe('paper')" > Paper </button>
+        <button onclick= "submitMe('scissors')" > Scissors </button>
         </div>
+        <div id="endGameMessage" style="display:none">
+           To start a new game, hit the button at the bottom of the page
+        </div>
+        <br>
+
+
+
+        
         
  <table>    
         
@@ -31,19 +41,23 @@
         
          
            
-     <div id="game" style="display:none"> 
+     <div id="game"> 
                 
-                <button onclick= "gameObject.newGame()"> New Game </button><br>
-                <button onclick= "submitMe('rock')" > Rock</button><br>
-                <button onclick= "submitMe('paper')" > Paper </button><br>
-                <button onclick= "submitMe('scissors')" > Scissors </button><br>
                 
-                Player Score : <p id="playerScore"></p>
-                ComputerScore : <p id="computerScore"></p>
-                Tie Notification : <p id="tieNotification"></p>
+                
+                
+                
+                Player: <p id="playerScore">0</p>
+                Computer: <p id="computerScore">0</p>
+                Tie: <p id="tie">0</p>
+                Game Winner: <p id="gameWinner">undecided</p>
+                <div id="newGame" style="display:none"><button onclick= "gameObject.newGame()"> New Game </button><br>
+                </div>
+
+                
           
-                Round Results: <p id="roundresults"></p>
-                Current Round: <p id="currentRound"></p><br>
+                
+                
           
 
      </div>  
