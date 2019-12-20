@@ -21,6 +21,7 @@ const gameObject = {
         this.updateScoreboard();
         document.getElementById("newGame").style.display = "none"
         document.getElementById("PlayerSelection").style.display = "block"
+        document.getElementById("endGameMessage").style.display = "none";
         
     },
 
