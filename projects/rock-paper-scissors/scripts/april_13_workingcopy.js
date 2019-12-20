@@ -1,12 +1,3 @@
-
-        
-
-           
-
-
-
-
-
                 function playRound(playerSelection, computerSelection) {
 
                 gameObject.playerChoice = playerSelection;
@@ -36,18 +27,7 @@
                                               
                     gameObject.updateRound()
                     
-                    gameObject.updateScoreboard();
-
-
-                    
-                    
-                    
-
-                    
-                
-                    
-                    
-                    
+                    gameObject.updateScoreboard();   
                 } 
 
 

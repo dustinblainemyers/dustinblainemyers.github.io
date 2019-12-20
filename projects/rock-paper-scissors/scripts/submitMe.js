@@ -1,12 +1,5 @@
-
 function submitMe(playerSelection) {
     
-    
-    
+playRound(playerSelection, computerPlay());
 
-    // gameObject.updateScoreboard();
-
-   playRound(playerSelection, computerPlay());
-    }
-
-    // if (gameObject.roundCurrent)
+    }  
