@@ -9,57 +9,31 @@
 
                 function playRound(playerSelection, computerSelection) {
 
-                    let matchresult = '';
+                gameObject.playerChoice = playerSelection;
+                gameObject.computerChoice = computerSelection;
                     
                     
                     
                          
                         
-                        if (playerSelection == computerSelection) {
+                        if (playerSelection === computerSelection) {
                         gameObject.tie++
                 
                         
                         
+                        } else if (computerSelection === "scissors" && playerSelection === "rock" ||
+                                   computerSelection === "rock" && playerSelection === "paper" ||
+                                   computerSelection === "paper" && playerSelection == "scissors") {
+
+                                    
+                                    gameObject.playerScore++;
+
                         } else {
-                                    switch(playerSelection) {
-                                        case "rock" :
-                                        
                                     
-                                            if (computerSelection == "scissors") {
-                                                playRound.matchresult = "Player Win" ;
-                                                gameObject.playerScore++;
-                                        
-                                                } else {
-                                                playRound.matchresult = " Computer Wins";
-                                                gameObject.computerScore++;
-                                                }
-                                                break;
-                                        case "paper" :
-                                                if (computerSelection == "rock") {
-                                                playRound.matchresult = "Player Wins" ;
-                                                gameObject.playerScore++;
-                                                } else {
-                                                playRound.matchresult = " Computer Wins";
-                                                gameObject.computerScore++;
-                                                }
-                                                break;
-                                        
-                                        case  "scissors" :
-                                        
-                                                if (computerSelection == "paper") {
-                                                playRound.matchresult = "Player Wins" ;
-                                                gameObject.playerScore++;
-                                                } else {
-                                                    playRound.matchresult = " Computer Wins";
-                                                    gameObject.computerScore++;
-                                                }
-                                        
-                                    
-                                
-                                    } 
-                    
-                                 } 
-                    
+                                    gameObject.computerScore++;
+                        }
+                                            
+                                              
                     gameObject.updateRound()
                     
                     gameObject.updateScoreboard();

@@ -32,6 +32,8 @@ const gameObject = {
         document.getElementById("computerScore").innerHTML = this.computerScore ;
         document.getElementById("tie").innerHTML = this.tie ;
         document.getElementById("gameWinner").innerHTML = this.gameWinner ;
+        document.getElementById("everyonesChoices").innerHTML = `Player chose ${this.playerChoice} and Computer chose ${this.computerChoice}` ;
+        
 
         
     },
