@@ -67,6 +67,7 @@ const gameObject = {
             document.getElementById("newGame").style.display = "block";
             document.getElementById("PlayerSelection").style.display = "none";
             document.getElementById("endGameMessage").style.display = "block";
+            document.getElementById("endGameMessage").innerHTML = `${this.gameWinner} is victorious. `;
             
     }
     // have a method to iterate the roundCurrent (current round).  Have a way of returning or doing a try/catch 
